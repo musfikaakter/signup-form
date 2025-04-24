@@ -5,6 +5,9 @@
 4. error message not showing for weak password ✔️
 5. regex not working, if password field is filled next time isValid is true ✔️
 
+//** deploy bug
+* when we deploy site the html file must me index.html ✔️
+
 <BUGS are fixed
 1. toke /input(fullname) as function /argument & toke /value(fullname.value) of each input as /parameter
 2. used /regex inside function with /test() method & /returned it [it will return /true if every criteria is met & /false if not]
