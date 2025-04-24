@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-color: hsl(325, 100%, 53%);
+    --light-color: hsl(328, 100%, 93%);
+    --text-color: hsl(0, 0%, 0%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.text {
+    color: hsl(0, 0%, 0%);
+    font-size: 5em;
+    font-weight: 900;
+    width: min-content;
+    margin-right: 1rem;
+    display: none;
+}
+
+.container {
+    height: 100dvh;
+    width: max(100%, 25em);
+    background-color: var(--white-color);
+    text-align: center;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & h1 {
+        font-weight: 800;
+        color: var(--pink-color);
+        border-bottom: 3px solid var(--pink-color);
+        margin-bottom: 2.6rem;
+    }
+}
+
+#form {
+    height: fit-content;
+    width: 60%;
+    border-radius: 1em;
+    border: 1px solid var(--pink-color);
+    padding: 2rem;
+
+    & button {
+        width: 100%;
+        font-size: 1.1em;
+        background-color: var(--pink-color);
+        color: var(--white-color);
+        font-weight: 600;
+        padding: 0.4rem;
+        border: none;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        transition: 150ms linear;
+
+        &:hover {
+            background-color: var(--text-color);
+        }
+    } 
+}
+#form > * {
+    margin-bottom: 1.6rem;
+}
+
+#form .input_holder {
+    background-color: var(--light-color);
+    outline: 1px solid var(--light-color);
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    height: 2.2rem;
+    width: 2.2rem;
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    padding: 0.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0.4rem 0 0 0.4rem;
+    
+    & svg {
+        width: 100%;
+        fill: var(--white-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input {
+    height: 2.1rem;
+    width: 100%;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding-left: 0.4rem;
+    outline: none;
+    border-radius: 0 0.4rem 0.4rem 0;
+    border: none;
+    transition: 150ms linear;
+}
+
+#form .input_holder:has(input:hover) {
+    outline: 1px solid var(--pink-color);
+}
+
+#form .input_holder:has(input:focus) {
+    outline: 1px solid var(--text-color);
+}
+#form .input_holder:has(input:focus) label{
+    background-color: var(--text-color);
+}
+
+#form .error label {
+    background-color: hsl(354, 100%, 56%);
+}
+#form .input_holder.error  {
+    border: 1px solid hsl(354, 100%, 56%);
+}
+
+#error_message {
+    color: #ff1f36;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 60%;
+    margin: 0;
+}
+
+.icon {
+    width: 1.4rem;
+    fill: var(--pink-color);
+    margin-right: 0.6rem;
+    cursor: pointer;
+    &:hover {
+        fill: var(--text-color);
+    }
+}
+
+.eye_slash {
+    display: none;
+}
+
+.redirect {
+    font-size: 1em;
+    & a {
+        text-decoration: none;
+        color: var(--pink-color);
+        transition: 150ms linear;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 46em) {
+    body {
+        background: url(./shuna.jpg) 100% 0% no-repeat;
+        background-size: cover;
+    }
+    body .container {
+        width: min(60%, 46em);
+        border-radius: 0 1rem 1rem 0;
+    }
+    body .text {
+        display: block;
+    }
+}
+
+@media (min-width: 80em) {
+    body {
+        background-size: contain;
+    }
+    body .container {
+        width: min(40%, 46em);
+    }
+}
+
