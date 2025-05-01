@@ -183,7 +183,7 @@ input {
 
 @media (min-width: 46em) {
     body {
-        /* background: url(./shuna.jpg) 100% 0% no-repeat; */
+        background: url(./shuna.jpg) 100% 0% no-repeat;
         background-size: cover;
     }
 
