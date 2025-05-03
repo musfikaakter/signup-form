@@ -72,9 +72,10 @@ body {
         &:hover {
             background-color: var(--text-color);
         }
-    } 
+    }
 }
-#form > * {
+
+#form>* {
     margin-bottom: 1.6rem;
 }
 
@@ -99,7 +100,7 @@ label {
     font-size: 1em;
     font-weight: 600;
     border-radius: 0.4rem 0 0 0.4rem;
-    
+
     & svg {
         width: 100%;
         fill: var(--white-color);
@@ -130,14 +131,16 @@ input {
 #form .input_holder:has(input:focus) {
     outline: 1px solid var(--text-color);
 }
-#form .input_holder:has(input:focus) label{
+
+#form .input_holder:has(input:focus) label {
     background-color: var(--text-color);
 }
 
 #form .error label {
     background-color: hsl(354, 100%, 56%);
 }
-#form .input_holder.error  {
+
+#form .input_holder.error {
     border: 1px solid hsl(354, 100%, 56%);
 }
 
@@ -154,6 +157,7 @@ input {
     fill: var(--pink-color);
     margin-right: 0.6rem;
     cursor: pointer;
+
     &:hover {
         fill: var(--text-color);
     }
@@ -165,10 +169,12 @@ input {
 
 .redirect {
     font-size: 1em;
+
     & a {
         text-decoration: none;
         color: var(--pink-color);
         transition: 150ms linear;
+
         &:hover {
             text-decoration: underline;
         }
@@ -180,10 +186,12 @@ input {
         background: url(./shuna.jpg) 100% 0% no-repeat;
         background-size: cover;
     }
+
     body .container {
         width: min(60%, 46em);
         border-radius: 0 1rem 1rem 0;
     }
+
     body .text {
         display: block;
     }
@@ -193,8 +201,8 @@ input {
     body {
         background-size: contain;
     }
+
     body .container {
         width: min(40%, 46em);
     }
 }
-
